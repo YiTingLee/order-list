@@ -2,8 +2,15 @@ export interface Order {
   name: string;
   logo: string;
   status: {
-    code: number;
+    code: OrderCodeEnum;
     type: string;
   };
-  date: Date;
+  date: string;
+}
+
+export enum OrderCodeEnum {
+  Processing = 1,
+  Success = 2,
+  Cancelled = 3,
+  Sent = 4
 }

@@ -7,10 +7,7 @@ export class AppService {
   ) { }
 
   getOrderList(): Order[] {
-    return mockOrderList.orders.map(order => ({
-      ...order,
-      date: new Date(order.date)
-    }));
+    return mockOrderList.orders;
   }
 }
 
